@@ -127,6 +127,8 @@ nav ul li a:active{
     padding: 50px;
     gap:50px;
     background-image: url(/white-table.jpg);
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 600px;
