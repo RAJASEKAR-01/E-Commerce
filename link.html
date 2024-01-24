@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: salmon;
+        }
+        .container{
+            min-height: 80vh;
+            width:60%;
+            border: 2px solid;
+            margin: 4em auto;
+            border-radius:10px;
+            position: relative;
+            background: url(/iphone.jpg) center/cover ;
+            transition: background 2s ease-in-out ;
+        }
+        .btn-left{
+            position: absolute;
+            top:50%;
+            color:wheat;
+            left:-2%;
+            background-color: black;
+            border:2px solid black;
+            border-radius:2em;
+            padding: .4em .6em;
+            transform: translateY(calc(-50%));
+        }
+        .btn-right{
+            position: absolute;
+            top:50%;
+            color:wheat;
+            right:-2%;
+            background-color: black;
+            border:2px solid black;
+            border-radius:2em;
+            padding: .4em .6em;
+            transform: translateY(calc(-50%));
+            
+            
+        }
+        
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <a class="btn btn-left"><i class="fa solid fa-caret-left"></i></a>
+        <a class="btn btn-right"><i class="fa solid fa-caret-right"></i></a>
+    </div>
+    <script>
+        let index=0;
+        const con=document.querySelector(".container");
+        const btns=document.querySelectorAll(".btn");
+        const imglist=["iphone","ipad","airpods","macbook"];
+        btns.forEach((button)=>{
+
+            button.addEventListener("click",()=>{
+                
+               if( button.classList.contains("btn-left")){
+                index--;
+                if(index<0){
+                    index=imglist.length-1;
+                }
+                con.style.background=`url("/${imglist[index]}.jpg") center/cover`
+
+               
+               }
+               else{
+                index++;
+                if(index===imglist.length){
+                    index=0;
+                }
+                con.style.background=`url("/${imglist[index]}.jpg") center/cover`
+
+               
+               }
+                
+               }
+            )
+        
+        })
+        console.log(`"/${imglist[index]}.jpg"`);
+
+    </script>
+  
+   
+</body>
+</html>
