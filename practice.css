@@ -129,6 +129,7 @@ nav ul li a:active{
     background-image: url(/white-table.jpg);
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     height: 600px;
     font-size: 1.5em;
 
