@@ -45,6 +45,7 @@ i{
     transition: 1s ease-out;
     top:0;
     left:-60% ;
+    z-index: 2;
     
 }
 .side-nav ul{
@@ -270,6 +271,23 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    
+    padding: 30px;
+  }
+  .video-container {
+    position: fixed;
+    
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+  }
 
 
 @media screen and (max-width:670px){
